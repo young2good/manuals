@@ -128,4 +128,5 @@ pio.renderers.default = "plotly_mimetype+notebook_connected"
 
 
 ##### 쓸데없는 참고
-test 폴더에서 보다시피 qmd파일도 당연히 랜더가 된다
+test 폴더에서 보다시피 qmd파일도 당연히 랜더가 된다 <br>
+그리고 랜더하면 filename_files라는 폴더가 생겨서 거기에 뭔가 파일이 막 많이 생긴다.
