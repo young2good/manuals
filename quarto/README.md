@@ -113,6 +113,7 @@ quarto render filename.ipynb --excute
 quarto render filename.ipynb --to html
 quarto render filename.ipynb --to pdf
 ```
+preview를 이용해서 미리보기를 하면 terminal에서 커서가 사라지고 browse 상태가 되는데 이때는 ctrl+c로 탈출한다.<br>
 \--excute 옵션은 코드를 다시 실행하면서 랜더링<br>
 아무것도 안붙이면 html형식으로 됨.<br>
 \--to pdf는 LaTex가 설치되어야함
