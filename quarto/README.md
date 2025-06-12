@@ -54,8 +54,21 @@ format:
     echo: false
     callout-appearance: default
 ---
-
 ```
+\++ 추가 결과물에서 코드 내용 보이기/숨기기 format
+```
+---
+title: "예제 문서"
+format:
+  html:
+    code-fold: true       # 코드 접기 (토글 버튼으로 펼치기 가능)
+    code-tools: true      # 코드 복사 버튼/토글 메뉴 추가
+    code-summary: "코드 보기"  # 접힌 코드에 표시할 텍스트
+    echo: true            # 코드 보이기 (false면 코드 숨김)
+    eval: true            # 코드 실행 여부
+---
+```
+
 
 ### 3. 코드 블럭을 아래 형식에 맞게 작성
 YAML로 설정을 마쳤으면 Markdown을 아래 포맷에 맞게 작성해서 리포트의 전반적인 톤을 맞출 수 있다.<br>
@@ -90,9 +103,19 @@ warnings.filterwarnings("ignore")
 ```
 
 ### 5. 작업이 완료되면 랜더링을 통해 html로 변환 가능하다
-어떻게 했었지??
-이거 터미널에서 하는거 -> 이거 작성하고나서 샘플 파일 하나 만들고 끝.
-
+그 전에 완료된 작업 파일을 미리보기도 가능하다.<br>
+terminal을 이용해서 작업된 파일이 저장된 폴더의 경로로 이동한다. (나는 지금은 cmd를 쓰니까 `cd C:\Users\mydesktop\Desktop` 이런식으로 하면 될듯하다)
+그리고 터미널에서 아래 명령어를 실행한다. (Quarto가 설치되어 있어야함.)
+```
+quarto preview filename.ipynb
+quarto render filename.ipynb
+quarto render filename.ipynb --excute
+quarto render filename.ipynb --to html
+quarto render filename.ipynb --to pdf
+```
+\--excute 옵션은 코드를 다시 실행하면서 랜더링<br>
+아무것도 안붙이면 html형식으로 됨.<br>
+\--to pdf는 LaTex가 설치되어야함
 
 ### 추가 참고 사항
 VS code에서 Plotly 사용 시 호환 문제가 발생하는 경우 renderer를 아래와 같이 변경하면 해결이 가능하다고 합니다. 
