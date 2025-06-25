@@ -28,10 +28,20 @@ https://voila.readthedocs.io/en/stable/index.html
 `voila file_name.ipybn --theme=dark` 다크 모드로 열기 <br>
 `voila file_name.ipybn --no-browser` 서버에 띄우긴 하는데 웹은 열지않기 <br>
 `voila file_name.ipybn --port=8887` 다른 포트에다가 띄우기 <br>
+`voila file_name.ipybn --strip_sourcse=False` 내가 작업한 코드도 다 띄우기 <br>
+`voila file_name.ipybn --host=0.0.0.0` 호스트 설정하기 (다른 사람과 공유할때 0.0.0.0 사용) <br>
 
+## 3. 웹을 공유하기
+사실 이 작업물을 웹에 띄운 이유는 다른 사람과 공유하기 위해서이다.<br>
+같은 네트워크 환경의 사람들에게는 내 ip와 port를 공유해주면 된다. (위에서 --host=0.0.0.0을 해야 public이 되는 것임) <br>
+그러면 같은 네트워크 환경의 사람은 `http://<ip주소>:<포트번호>` 를 입력하여 내가 작업한 페이지를 볼 수 있다.<br><br>
+같은 네트워크가 아니라 다른 환경의 사람과 공유하기 위해서는 ngrok을 사용한다. (https://ngrok.com/downloads/windows) <br>
+그 외에도 다른 여러가지 방법이 있다. (https://voila.readthedocs.io/en/stable/deploy.html#)
 
 
 ### 추가: 그런데 이건 Jupyter Notebook에서 사용할 때 더 유용하게 사용된다.
-이거 더 작성 그리고 위에 내용 잘 정리 필요. 그리고 나서 마무리할거임
-그리고 파일을 하나 만들어야함.> voila 띄워볼 파일 intractive chart 지원 되는거.
+이거 더 작성 그리고 위에 내용 잘 정리 필요. 그리고 나서 마무리할거임 (jupyter notebook 케이스 추가)
+해당 폴더의 voila_sample.ipynb파일은 voila를 이용해 작업물을 웹에 띄우기는 것을 해볼 수 있는 파일이다. interactive chart를 이리저리 만져볼 수 있다.
+<br><br>
+voila의 자세한 설명은 아래 깃헙에서 확인가능하다.
 https://github.com/voila-dashboards/voila?tab=readme-ov-file
